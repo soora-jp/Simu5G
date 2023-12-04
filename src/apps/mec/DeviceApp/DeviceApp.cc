@@ -329,8 +329,9 @@ void DeviceApp::initialize(int stage){
     * easier to manage
     */
 
+    startTime = par("startTime");
     cMessage *msg = new cMessage("connect");
-    scheduleAt(simTime()+0.0 , msg);
+    scheduleAt(simTime()+startTime, msg);
 }
 
 void DeviceApp::handleMessage(omnetpp::cMessage *msg)
